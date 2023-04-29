@@ -12,6 +12,8 @@ const CompCreateBlog = () => {
     //Procedimiento guardar
     const store = async (e) => {
         e.preventDefault()
+        console.log("El valor de título es " + title);
+        console.log("El valor de contenido es " + content);
         await axios.post(URI, {
             title: title,
             content: content})
@@ -43,7 +45,7 @@ const CompCreateBlog = () => {
                         required
                     />
                 </div>
-                <button type='submit' onClick={store} className='btn btn-primary'>Store</button>
+                <button type='submit' className='btn btn-primary'>Store</button>
             </form>
         </div>
     )
