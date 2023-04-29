@@ -3,8 +3,9 @@ import './App.css';
 
 //Importamos los componentes
 import CompShowBlogs from './blog/ShowBlogs.js';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CompCreateBlog from './blog/CreateBlog.js';
+import CompEditBlog from './blog/EditBlog';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={ <CompShowBlogs />} />
           <Route path='/create' element={ <CompCreateBlog />} />
+          <Route path='/edit/:id' element={ <CompEditBlog />} />
         </Routes>
       </BrowserRouter>
     </div>
