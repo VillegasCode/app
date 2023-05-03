@@ -37,7 +37,7 @@ const CompCreateBlog = () => {
 
                 <div className='mb-3'>
                     <label className='form-label'>Content</label>
-                    <input
+                    <textarea
                         value={content}
                         onChange={ (e)=> setContent(e.target.value) }
                         type="text"
